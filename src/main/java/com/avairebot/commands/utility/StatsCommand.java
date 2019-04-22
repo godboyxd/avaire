@@ -79,7 +79,7 @@ public class StatsCommand extends Command {
 
     @Override
     public boolean onCommand(CommandMessage context, String[] args) {
-        StringBuilder description = new StringBuilder("Created by [Senither#0001](https://senither.com/) using the [JDA](https://github.com/DV8FromTheWorld/JDA) framework!");
+        StringBuilder description = new StringBuilder("Created by a human duhhh");
         if (avaire.getCache().getAdapter(CacheType.FILE).has("github.commits")) {
             description = new StringBuilder("**" + context.i18n("latestChanges") + "**\n");
             List<LinkedTreeMap<String, Object>> items = (List<LinkedTreeMap<String, Object>>) avaire.getCache().getAdapter(CacheType.FILE).get("github.commits");
@@ -97,8 +97,7 @@ public class StatsCommand extends Command {
         }
 
         context.makeEmbeddedMessage(MessageType.INFO,
-            new MessageEmbed.Field(context.i18n("fields.author"), "[Senither#0001](https://senither.com/)", true),
-            new MessageEmbed.Field(context.i18n("fields.website"), "[avairebot.com](https://avairebot.com/)", true),
+            new MessageEmbed.Field(context.i18n("fields.author"), "[yeetus#0666]", true),
             new MessageEmbed.Field(context.i18n("fields.library"), "[JDA](https://github.com/DV8FromTheWorld/JDA)", true),
             new MessageEmbed.Field(context.i18n("fields.database"), getDatabaseQueriesStats(context), true),
             new MessageEmbed.Field(context.i18n("fields.messages"), getMessagesReceivedStats(context), true),
@@ -110,8 +109,8 @@ public class StatsCommand extends Command {
             new MessageEmbed.Field(context.i18n("fields.channels"), NumberUtil.formatNicely(avaire.getShardEntityCounter().getChannels()), true),
             new MessageEmbed.Field(context.i18n("fields.servers"), NumberUtil.formatNicely(avaire.getShardEntityCounter().getGuilds()), true)
         )
-            .setTitle(context.i18n("title"), "https://discordapp.com/invite/gt2FWER")
-            .setAuthor("AvaIre v" + AppInfo.getAppInfo().version, "https://discordapp.com/invite/gt2FWER", avaire.getSelfUser().getEffectiveAvatarUrl())
+            .setTitle(context.i18n("title"), "https://discord.gg/hJBD8TG")
+            .setAuthor("AvaIre v" + AppInfo.getAppInfo().version, "https://discord.gg/hJBD8TG", avaire.getSelfUser().getEffectiveAvatarUrl())
             .setFooter(context.i18n("footer",
                 NumberUtil.formatNicely(AudioHandler.getDefaultAudioHandler().getTotalListenersSize()),
                 NumberUtil.formatNicely(AudioHandler.getDefaultAudioHandler().getTotalQueueSize())
